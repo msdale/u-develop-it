@@ -4,7 +4,8 @@
   "description": "A development think tank for the promotion of new technologies",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/msdale/u-develop-it/issues"
   },
-  "homepage": "https://github.com/msdale/u-develop-it#readme"
+  "homepage": "https://github.com/msdale/u-develop-it#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "jest": "^27.4.5",
+    "mysql2": "^2.3.3"
+  }
 }

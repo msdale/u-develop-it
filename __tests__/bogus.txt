@@ -1,0 +1,14 @@
+select 
+  a.first_name,
+  a.last_name,
+  c.name as "party_name",
+  b.tot as "total votes"
+from
+  candidates a
+    inner join
+      ( select candidate_id, count(*) as "tot" from votes group by 1 ) b
+    on a.id = b.candidate_id
+    inner join
+      parties c
+    on a.party_id = c.id
+order by b.tot desc;
